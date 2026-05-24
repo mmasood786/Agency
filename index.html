@@ -1,0 +1,965 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DevStudio Hub — Websites that put local businesses on the map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%236ea8ff'/><text x='16' y='23' text-anchor='middle' font-family='monospace' font-weight='700' font-size='18' fill='%23061026'>D</text></svg>" />
+</head>
+<body>
+
+<!-- custom cursor -->
+<div class="cursor-ring" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+
+<!-- announcement banner -->
+<div class="promo-banner" id="promoBanner">
+  <div class="promo-inner">
+    <span class="promo-dot" aria-hidden="true"></span>
+    <p class="promo-text">
+      <strong>🔥 This month only:</strong> Free website audit + personalized email strategy report —
+      <span class="promo-spots">only 3 spots left</span>
+    </p>
+    <a class="promo-btn" href="#contact">Claim Your Spot →</a>
+  </div>
+</div>
+
+<!-- nav -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark">D</span>
+      <span>DevStudio <em style="font-style:normal;color:var(--accent);">Hub</em></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn primary" href="#contact">
+      Book a free consult
+      <svg class="arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="row gap-3 reveal" style="flex-wrap:wrap;margin-bottom:4px;">
+          <span class="eyebrow">A digital studio, est. 2019</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:999px;background:var(--accent-soft);border:1px solid var(--accent-glow);font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="4" stroke="currentColor" stroke-width="1.2"/><path d="M3 5h4M5 3v4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            AI-assisted builds · Delivered in days
+          </span>
+        </div>
+        <h1 class="h-display reveal delay-1" style="margin-top:24px;">
+          Your competitors are getting customers <em>you should have.</em>
+        </h1>
+        <div class="hero-sub reveal delay-2">
+          <p>
+            We build websites for dentists, roofers, gyms, restaurants, salons, and service
+            businesses tired of being invisible online. No tech jargon, no bloated agencies
+            — just a clean, fast site that turns visitors into paying customers.
+          </p>
+          <div class="hero-meta">
+            <div>
+              <div class="label">Working remotely</div>
+              <strong>Worldwide</strong>
+            </div>
+            <div>
+              <div class="label">Response time</div>
+              <strong>Within 24 hrs</strong>
+            </div>
+          </div>
+        </div>
+        <div class="row gap-3 reveal delay-3" style="margin-top:40px;">
+          <a class="btn primary lg" href="#contact">
+            Start a project
+            <svg class="arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a class="btn lg" href="#work">See the work</a>
+        </div>
+      </div>
+
+      <div class="hero-feature reveal delay-2" id="heroFeature" data-mode="calc" aria-label="Get an instant quote">
+        <!-- mode: calc — interactive quote calculator (default) -->
+        <div class="quote-calc" id="quoteCalc">
+          <div class="qc-top">
+            <span class="badge">Instant quote · 30 sec</span>
+            <span class="qc-live"><span class="qc-dot"></span> live pricing</span>
+          </div>
+
+          <div class="qc-q">
+            <div class="qc-label">01 — Your business</div>
+            <div class="qc-chips" data-q="type">
+              <button class="qc-chip active" data-val="Restaurant or café">Restaurant</button>
+              <button class="qc-chip" data-val="Salon or barber">Salon</button>
+              <button class="qc-chip" data-val="Medical or dental">Medical</button>
+              <button class="qc-chip" data-val="Roofing or contractor">Roofing</button>
+              <button class="qc-chip" data-val="Gym or personal trainer">Fitness</button>
+<button class="qc-chip" data-val="Other">Other</button>
+            </div>
+          </div>
+
+          <div class="qc-q">
+            <div class="qc-label">02 — Package</div>
+            <div class="qc-tier-row" data-q="tier">
+              <button class="qc-tier" data-val="starter">
+                <span class="t-name">Starter</span>
+                <span class="t-meta">3 pages</span>
+              </button>
+              <button class="qc-tier active" data-val="standard">
+                <span class="t-name">Standard</span>
+                <span class="t-meta">5 pages</span>
+              </button>
+              <button class="qc-tier" data-val="premium">
+                <span class="t-name">Premium</span>
+                <span class="t-meta">7 pages</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="qc-result">
+            <div class="qc-result-row">
+              <span class="qc-result-label">Your estimate</span>
+              <span class="qc-result-price" id="qcPrice">$400 — $650</span>
+            </div>
+            <div class="qc-result-meta">
+              <span id="qcDelivery">Delivered in 7 – 10 days</span>
+              <span class="qc-sep">·</span>
+              <span id="qcRevs">2 revision rounds</span>
+            </div>
+            <a href="#contact" class="qc-cta" id="qcCta">
+              <span>Claim this quote</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </a>
+            <div class="qc-fine">No commitment · Reply within 24h</div>
+          </div>
+        </div>
+
+        <!-- mode: studio — featured project tile (alt) -->
+        <div class="studio-mode">
+          <span class="badge">Featured · 2025</span>
+          <div class="studio-shot"></div>
+          <div class="meta">
+            <div>
+              <div class="title">Sable &amp; Vine</div>
+              <div style="color:var(--muted);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;margin-top:4px;">Wine bar · Brooklyn</div>
+            </div>
+            <div class="yr">↗ visit</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Dentists</span><span>Med Spas</span><span>Roofing</span><span>Restaurants</span><span>Gyms</span><span>Personal Trainers</span><span>Real Estate</span><span>Salons</span><span>Barbers</span><span>HVAC</span><span>Plumbers</span><span>Home Services</span><span>Car Detailing</span><span>Contractors</span><span>Medical Clinics</span>
+      <span>Dentists</span><span>Med Spas</span><span>Roofing</span><span>Restaurants</span><span>Gyms</span><span>Personal Trainers</span><span>Real Estate</span><span>Salons</span><span>Barbers</span><span>HVAC</span><span>Plumbers</span><span>Home Services</span><span>Car Detailing</span><span>Contractors</span><span>Medical Clinics</span>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" style="padding:72px 0;">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat reveal">
+        <div class="num" data-count="142"><span class="val">0</span><small>+</small></div>
+        <div class="label">Local sites shipped</div>
+      </div>
+      <div class="stat reveal delay-1">
+        <div class="num" data-count="7"><span class="val">0</span><small>yrs</small></div>
+        <div class="label">Quietly building</div>
+      </div>
+      <div class="stat reveal delay-2">
+        <div class="num" data-count="98"><span class="val">0</span><small>%</small></div>
+        <div class="label">Client retention</div>
+      </div>
+      <div class="stat reveal delay-3">
+        <div class="num" data-count="3.2"><span class="val">0</span><small>×</small></div>
+        <div class="label">Avg. traffic lift</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow reveal">01 — Services</span>
+      <h2 class="h-section reveal delay-1">Two things, done <em>properly.</em></h2>
+      <p class="lede reveal delay-2">No upsells, no bloated retainers. We do the things small businesses actually need, and we do them well.</p>
+    </div>
+
+    <div class="services-list">
+      <div class="service open" data-service>
+        <div class="service-head">
+          <span class="service-num">S/01</span>
+          <h3 class="service-name">New website</h3>
+          <span class="service-price">from $200</span>
+          <span class="service-toggle"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </div>
+        <div class="service-body">
+          <div>
+            <div class="service-body-inner">
+              <div></div>
+              <p>Your first impression happens online before they ever walk through your door. We build websites that make visitors stop scrolling, trust your business instantly, and hit 'Contact' — not your competitor's page.</p>
+              <ul class="service-includes">
+                <li>Strategy &amp; sitemap</li>
+                <li>Custom design system</li>
+                <li>4–8 page build</li>
+                <li>On-page SEO setup</li>
+                <li>Revision rounds (1–3 per package)</li>
+                <li>Delivered in 5–14 days</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service" data-service>
+        <div class="service-head">
+          <span class="service-num">S/02</span>
+          <h3 class="service-name">Website redesign</h3>
+          <span class="service-price">from $250</span>
+          <span class="service-toggle"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </div>
+        <div class="service-body">
+          <div>
+            <div class="service-body-inner">
+              <div></div>
+              <p>Every day your old site is live, it's quietly sending customers to someone else. Slow load times, broken mobile layouts, and outdated design all cost you real jobs. We rebuild from the inside — faster, sharper, and optimised to rank — without touching your Google position.</p>
+              <ul class="service-includes">
+                <li>We review what's working and what's costing you customers</li>
+                <li>Fresh look that matches your business today</li>
+                <li>Full rebuild — 3 to 7 pages depending on your package</li>
+                <li>All your existing content moved over, nothing lost</li>
+                <li>Mobile-friendly on every device (speed optimization in Premium)</li>
+                <li>Basic SEO on all packages, full SEO setup in Premium</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+  <div class="wrap">
+    <div class="row between" style="align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:24px;">
+      <div class="section-head reveal" style="margin-bottom:0;">
+        <span class="eyebrow">02 — Selected work</span>
+        <h2 class="h-section">Real businesses, <em>real results.</em></h2>
+      </div>
+      <div class="carousel-ctrls reveal delay-1" style="margin-top:0;">
+        <button id="prev" aria-label="Previous"><svg viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button id="next" aria-label="Next"><svg viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+
+    <div class="work-carousel-shell">
+      <div class="work-carousel" id="workCarousel">
+        <article class="work-card">
+          <div class="work-thumb"><div class="ph ph-1"><span class="label">Restaurant · 2025</span></div></div>
+          <div class="work-meta">
+            <div>
+              <div class="tag">New build</div>
+              <div class="title" style="margin-top:8px;">Saffron &amp; Stone</div>
+            </div>
+            <div class="yr">+187% bookings</div>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div class="work-thumb"><div class="ph ph-2"><span class="label">Salon · 2025</span></div></div>
+          <div class="work-meta">
+            <div>
+              <div class="tag">Redesign</div>
+              <div class="title" style="margin-top:8px;">North Hair Co.</div>
+            </div>
+            <div class="yr">+64% leads</div>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div class="work-thumb"><div class="ph ph-3"><span class="label">Yoga studio · 2024</span></div></div>
+          <div class="work-meta">
+            <div>
+              <div class="tag">New build</div>
+              <div class="title" style="margin-top:8px;">Ember Practice</div>
+            </div>
+            <div class="yr">3× memberships</div>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div class="work-thumb"><div class="ph ph-4"><span class="label">Plumber · 2024</span></div></div>
+          <div class="work-meta">
+            <div>
+              <div class="tag">Redesign</div>
+              <div class="title" style="margin-top:8px;">Mossback Plumbing</div>
+            </div>
+            <div class="yr">#1 on Maps</div>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div class="work-thumb"><div class="ph ph-5"><span class="label">Bakery · 2024</span></div></div>
+          <div class="work-meta">
+            <div>
+              <div class="tag">New build</div>
+              <div class="title" style="margin-top:8px;">Field Loaf</div>
+            </div>
+            <div class="yr">+212% orders</div>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div class="work-thumb"><div class="ph ph-6"><span class="label">Dentist · 2024</span></div></div>
+          <div class="work-meta">
+            <div>
+              <div class="tag">Redesign</div>
+              <div class="title" style="margin-top:8px;">Lumen Dental</div>
+            </div>
+            <div class="yr">+91% bookings</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section id="before-after">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow reveal">03 — Before / after</span>
+      <h2 class="h-section reveal delay-1">Four redesigns, <em>side by side.</em></h2>
+      <p class="lede reveal delay-2">Pick a business. Drag the handle. Same neighbourhood, same week — each lift is real, measured 90 days after launch.</p>
+    </div>
+
+    <div class="ba-tabs reveal" id="baTabs" role="tablist">
+      <button class="ba-tab active" data-pair="0" role="tab" aria-selected="true">
+        <span class="tab-eyebrow">Plumber</span>
+        <span class="tab-name">Mossback</span>
+        <span class="tab-stat">+312% leads</span>
+      </button>
+      <button class="ba-tab" data-pair="1" role="tab" aria-selected="false">
+        <span class="tab-eyebrow">Restaurant</span>
+        <span class="tab-name">Saffron &amp; Stone</span>
+        <span class="tab-stat">+187% reservations</span>
+      </button>
+      <button class="ba-tab" data-pair="2" role="tab" aria-selected="false">
+        <span class="tab-eyebrow">Salon</span>
+        <span class="tab-name">North Hair Co.</span>
+        <span class="tab-stat">+64% bookings</span>
+      </button>
+      <button class="ba-tab" data-pair="3" role="tab" aria-selected="false">
+        <span class="tab-eyebrow">Bakery</span>
+        <span class="tab-name">Field Loaf</span>
+        <span class="tab-stat">+212% orders</span>
+      </button>
+    </div>
+
+    <div class="ba-shell reveal" id="baShell">
+
+      <!-- pair 0: Mossback Plumbing -->
+      <div class="ba-pair active" data-pair="0">
+        <div class="ba-img ba-before">
+          <div class="fake-before">
+            <div class="browser">
+              <div class="fake-chrome"><span></span><span></span><span></span></div>
+              <div class="fake-body">
+                <div class="biz-name">Mossback Plumbing</div>
+                <div class="biz-sub">Family owned since 1987 ✦ Licensed &amp; insured</div>
+                <div class="biz-bar"></div>
+                <div class="biz-text w90"></div>
+                <div class="biz-text w70"></div>
+                <div class="biz-text w90"></div>
+                <div class="biz-cta">CALL NOW!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-img ba-after">
+          <div class="fake-after">
+            <div class="browser">
+              <div class="fake-chrome"><span></span><span></span><span></span></div>
+              <div class="fake-body">
+                <div class="biz-sub">Plumbing · est. 1987</div>
+                <div class="biz-name">Mossback.</div>
+                <div class="biz-grid"><div></div><div></div><div></div></div>
+                <div class="biz-cta">Book a visit →</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- pair 1: Saffron & Stone -->
+      <div class="ba-pair" data-pair="1">
+        <div class="ba-img ba-before">
+          <div class="rest-before">
+            <div class="browser">
+              <div class="chrome"><span></span><span></span><span></span></div>
+              <div class="header-bar">SAFFRON &amp; STONE  ·  ITALIAN BISTRO</div>
+              <div class="photo-band"></div>
+              <div class="welcome">Welcome to our family table</div>
+              <div class="body">Authentic Italian cuisine since 2003. We use only the freshest ingredients sourced from local farms.</div>
+              <div class="links"><span>View Menu (PDF)</span><span>Directions</span><span>Call us</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-img ba-after">
+          <div class="rest-after">
+            <div class="browser">
+              <div class="chrome"><span></span><span></span><span></span></div>
+              <div class="nav-row">
+                <div class="brand">Saffron &amp; Stone</div>
+                <div class="links"><span>Menu</span><span>Reservations</span><span>Story</span><span>Visit</span></div>
+              </div>
+              <div class="hero-photo">
+                <div class="title-overlay">
+                  <div class="biz-name">A neighborhood<br/>table.</div>
+                  <div class="reserve">Reserve →</div>
+                </div>
+              </div>
+              <div class="footer-bar"><span>Brooklyn, NY</span><span class="dot">·</span><span>Open until 11pm</span><span class="dot">·</span><span>4.8 ★ (612)</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- pair 2: North Hair Co. -->
+      <div class="ba-pair" data-pair="2">
+        <div class="ba-img ba-before">
+          <div class="salon-before">
+            <div class="browser">
+              <div class="nav-pink">
+                <span>★ North Hair Co. ★</span>
+                <span class="icons">♡ ✿ ❀ ✦</span>
+              </div>
+              <div class="body">
+                <div class="biz">North Hair Co.</div>
+                <div class="sparkles">✨ ✨ ✨</div>
+                <div class="slider"></div>
+                <div class="cta-pink">★ Click here to book! ★</div>
+                <div class="socials">FOLLOW US! 📷 🐦 📘 🎵 📌 ▶️</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-img ba-after">
+          <div class="salon-after">
+            <div class="browser">
+              <div class="chrome"><span></span><span></span><span></span></div>
+              <div class="top">
+                <span>North Hair Co.</span>
+                <span>Book · Services · Team</span>
+              </div>
+              <div class="center">
+                <div class="biz">North.</div>
+                <div class="sub">Hair, by appointment only</div>
+                <div class="grid">
+                  <div>10</div><div>11</div><div class="taken">12</div><div class="pick">14</div><div>15</div>
+                </div>
+              </div>
+              <div class="footer-bar">Pick a time · Pay later · 24h reschedule</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- pair 3: Field Loaf -->
+      <div class="ba-pair" data-pair="3">
+        <div class="ba-img ba-before">
+          <div class="bake-before">
+            <div class="browser">
+              <div class="chrome"><span></span><span></span><span></span></div>
+              <div class="top">
+                <div class="name">Field Loaf Bakery</div>
+                <div class="tagline">~ slow bread, made by hand, since 2016 ~</div>
+              </div>
+              <div class="body">
+                We are a small artisan bakery located on the corner of Main &amp; Cedar. Open Wednesday through Sunday. Please call ahead for special orders. Bread sells out by 11am most days! Follow us on Instagram for daily updates and photos of what's coming out of the oven.
+                <div class="ig-strip"><div></div><div></div><div></div><div></div><div></div><div></div></div>
+              </div>
+              <div class="socials">~ Instagram · Facebook · TripAdvisor · Yelp ~</div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-img ba-after">
+          <div class="bake-after">
+            <div class="browser">
+              <div class="chrome"><span></span><span></span><span></span></div>
+              <div class="head">
+                <div class="brand">Field Loaf</div>
+                <div class="nav"><span>Bakes</span><span>Subscribe</span><span>Visit</span></div>
+                <div class="cart">Bag · 2</div>
+              </div>
+              <div class="product-grid">
+                <div class="product"><div class="thumb" style="--c1:#e6c08a;--c2:#8a5a2a;"></div><div class="meta"><span class="name">Country</span><span class="price">$9</span></div></div>
+                <div class="product"><div class="thumb" style="--c1:#3a2a1a;--c2:#1a0e06;"></div><div class="meta"><span class="name">Rye</span><span class="price">$11</span></div></div>
+                <div class="product"><div class="thumb" style="--c1:#f4d49a;--c2:#a8753c;"></div><div class="meta"><span class="name">Brioche</span><span class="price">$8</span></div></div>
+                <div class="product"><div class="thumb" style="--c1:#d9a878;--c2:#5a3416;"></div><div class="meta"><span class="name">Sourdough</span><span class="price">$10</span></div></div>
+              </div>
+              <div class="order-bar">
+                <span>Pickup Thu — Sat</span>
+                <span class="cta">Order →</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ba-label before">Before</div>
+      <div class="ba-label after">After</div>
+      <div class="ba-handle" id="baHandle"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow reveal">04 — Process</span>
+      <h2 class="h-section reveal delay-1">Six clear steps, <em>no surprises.</em></h2>
+      <p class="lede reveal delay-2">From the first email to a live website in two weeks or less. Here's exactly how the work goes — including when money changes hands.</p>
+    </div>
+    <div class="process-grid reveal">
+      <div class="process-step">
+        <div class="num">01</div>
+        <div class="title">Email</div>
+        <div class="desc">Tell us about the business. We reply within 48 hours — either we accept the project or point you to someone better suited.</div>
+        <div class="time">Day 0 · Free</div>
+      </div>
+      <div class="process-step">
+        <div class="num">02</div>
+        <div class="title">Mockup</div>
+        <div class="desc">If accepted, we design a single homepage mockup so you can see the direction before any money changes hands.</div>
+        <div class="time">Day 1 – 2</div>
+      </div>
+      <div class="process-step pay">
+        <div class="num">03</div>
+        <div class="title">50% deposit</div>
+        <div class="desc">Mockup approved? Half of the fixed fee is invoiced. This is where the real work begins — your spot in the calendar is locked.</div>
+        <div class="time">Day 2 · 50% of total</div>
+      </div>
+      <div class="process-step">
+        <div class="num">04</div>
+        <div class="title">Two revisions</div>
+        <div class="desc">Two structured rounds to refine pages, copy, and details. Everything's on the table — no nickel-and-diming after.</div>
+        <div class="time">Day 3 – 5</div>
+      </div>
+      <div class="process-step">
+        <div class="num">05</div>
+        <div class="title">Build</div>
+        <div class="desc">We hand-code the site, wire the CMS, set up SEO and analytics, and put it on a staging URL for you to walk through.</div>
+        <div class="time">Day 5 – 10</div>
+      </div>
+      <div class="process-step pay">
+        <div class="num">06</div>
+        <div class="title">Launch &amp; final 50%</div>
+        <div class="desc">Domain pointed, search indexed, balance invoiced on go-live day. Then 30 days of free edits — texts answered same week.</div>
+        <div class="time">Day 10 – 14 · Remaining 50%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow reveal">05 — Packages</span>
+      <h2 class="h-section reveal delay-1">Clear pricing, <em>no surprises.</em></h2>
+      <p class="lede reveal delay-2">Fixed-fee packages that fit most local businesses. Need something else? We'll quote it in 48 hours.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="plan reveal">
+        <div>
+          <div class="plan-name">Starter</div>
+          <div class="plan-desc">A clean, essential 3-page site. Perfect for tradies, solo practitioners, and brand-new businesses.</div>
+        </div>
+        <div class="plan-price"><span class="amt">$200<span style="color:var(--muted);font-size:0.5em;">–$350</span></span><span class="per">one-time</span></div>
+        <ul>
+          <li>3 pages · Home, Services, Contact</li>
+          <li>Mobile-friendly build</li>
+          <li>Contact form</li>
+          <li>Basic on-page SEO</li>
+          <li>Delivered in 5–7 days</li>
+          <li class="off">Gallery &amp; About pages</li>
+          <li class="off">Revision rounds included</li>
+        </ul>
+        <a class="btn" href="#contact" style="margin-top:auto;">Choose Starter</a>
+      </div>
+
+      <div class="plan featured reveal delay-1">
+        <span class="ribbon">Most chosen</span>
+        <div>
+          <div class="plan-name">Standard</div>
+          <div class="plan-desc">The package most local businesses pick. Five pages, a quote button, and Google reviews built in.</div>
+        </div>
+        <div class="plan-price"><span class="amt">$400<span style="color:var(--muted);font-size:0.5em;">–$650</span></span><span class="per">one-time</span></div>
+        <ul>
+          <li>5 pages · Home, Services, Gallery, About, Contact</li>
+          <li>Mobile-friendly build</li>
+          <li>"Get a Free Quote" CTA button</li>
+          <li>Google reviews section</li>
+          <li>Basic on-page SEO</li>
+          <li>2 rounds of revisions</li>
+          <li>Delivered in 7–10 days</li>
+        </ul>
+        <a class="btn primary" href="#contact" style="margin-top:auto;">Choose Standard</a>
+      </div>
+
+      <div class="plan reveal delay-2">
+        <div>
+          <div class="plan-name">Premium</div>
+          <div class="plan-desc">Everything in Standard, plus a blog, FAQ, full SEO setup, and analytics — for businesses ready to grow.</div>
+        </div>
+        <div class="plan-price"><span class="amt">$700<span style="color:var(--muted);font-size:0.5em;">–$1,200</span></span><span class="per">one-time</span></div>
+        <ul>
+          <li>6–7 pages · all Standard + Blog + FAQ</li>
+          <li>Speed optimization</li>
+          <li>Full SEO setup</li>
+          <li>Google Analytics</li>
+          <li>3 rounds of revisions</li>
+          <li>Delivered in 10–14 days</li>
+          <li>Priority post-launch support</li>
+        </ul>
+        <a class="btn" href="#contact" style="margin-top:auto;">Choose Premium</a>
+      </div>
+    </div>
+
+    <div style="margin-top:32px;padding:20px 24px;border:1px dashed var(--border-strong);border-radius:14px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;">
+      <div style="display:flex;gap:14px;align-items:center;">
+        <span style="font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;color:var(--accent);text-transform:uppercase;">+ Care</span>
+        <span style="color:var(--muted);font-size:14px;">Add hosting &amp; ongoing edits from <strong style="color:var(--fg);">$19/mo</strong> — pause anytime.</span>
+      </div>
+      <a class="btn" href="#services">Learn about care plans</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow reveal">06 — Kind words</span>
+      <h2 class="h-section reveal delay-1">From the businesses <em>down the street.</em></h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>The new site paid for itself in five weeks. We finally look as good online as we do in the dining room — and my host stand isn't fielding "where are you located" calls anymore.</blockquote>
+        <div class="who">
+          <div class="avatar">L</div>
+          <div>
+            <div class="name">Lina Park</div>
+            <div class="biz">Owner · Saffron &amp; Stone</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial reveal delay-1">
+        <div class="stars">★★★★★</div>
+        <blockquote>I was nervous about working with a "studio" because of past quotes. Mainline was the opposite — flat fee, two calls, done. I get more booking requests in a week than I used to get in a month.</blockquote>
+        <div class="who">
+          <div class="avatar">D</div>
+          <div>
+            <div class="name">Devon Hayes</div>
+            <div class="biz">Owner · North Hair Co.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial reveal delay-2">
+        <div class="stars">★★★★★</div>
+        <blockquote>They redid our site without changing a single rank we had spent years earning. Faster, easier to update, and they pick up the phone. That last one is rarer than you'd think.</blockquote>
+        <div class="who">
+          <div class="avatar">M</div>
+          <div>
+            <div class="name">Marcus Whitley</div>
+            <div class="biz">Owner · Mossback Plumbing</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial reveal delay-1">
+        <div class="stars">★★★★★</div>
+        <blockquote>The site actually reflects the studio now. New students mention it on intake forms — they say it "looks like a place they want to be." That alone was worth the project.</blockquote>
+        <div class="who">
+          <div class="avatar">R</div>
+          <div>
+            <div class="name">Rosa Imani</div>
+            <div class="biz">Founder · Ember Practice</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial reveal delay-2">
+        <div class="stars">★★★★★</div>
+        <blockquote>I asked five agencies for quotes. Three never replied. One sent a 40-page deck. Mainline sent me a single page with a number and a date. Easy decision.</blockquote>
+        <div class="who">
+          <div class="avatar">A</div>
+          <div>
+            <div class="name">Avery Chen</div>
+            <div class="biz">Founder · Field Loaf</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial reveal delay-3">
+        <div class="stars">★★★★★</div>
+        <blockquote>We text small edits and they're done the next day. I cannot overstate how much mental load that removed from my week. Worth every dollar of the care plan.</blockquote>
+        <div class="who">
+          <div class="avatar">J</div>
+          <div>
+            <div class="name">Dr. Jodi Reyes</div>
+            <div class="biz">Owner · Lumen Dental</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow reveal">07 — FAQ</span>
+      <h2 class="h-section reveal delay-1">Questions we hear <em>often.</em></h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq" data-faq>
+        <div class="faq-q">
+          <div class="q">How long does it take to build my website?</div>
+          <span class="faq-toggle"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </div>
+        <div class="faq-a"><div><p>Most websites are completed in 5-14 days, depending on the package you choose. Starter websites take about a week, while Premium projects with custom features take up to 2 weeks. I'll give you a clear timeline before we start, and I always deliver on time.</p></div></div>
+      </div>
+
+      <div class="faq" data-faq>
+        <div class="faq-q">
+          <div class="q">Do I need to provide the content (text and images)?</div>
+          <span class="faq-toggle"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </div>
+        <div class="faq-a"><div><p>Not necessarily! For Starter and Professional packages, I can help you write basic content and use high-quality stock images if needed. The Premium package includes professional content writing. Of course, if you have your own content, that's great too—I'll optimize it for your site.</p></div></div>
+      </div>
+
+      <div class="faq" data-faq>
+        <div class="faq-q">
+          <div class="q">What if I don't like the design?</div>
+          <span class="faq-toggle"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </div>
+        <div class="faq-a"><div><p>I show you design mockups before building anything, so you can give feedback early. Every package includes revision rounds (1 for Starter, 2 for Professional, unlimited for Premium). My goal is to make you proud of your website—I'm not done until you love it.</p></div></div>
+      </div>
+
+      <div class="faq" data-faq>
+        <div class="faq-q">
+          <div class="q">Will my website work on phones and tablets?</div>
+          <span class="faq-toggle"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </div>
+        <div class="faq-a"><div><p>Absolutely! Every website I build is fully responsive—meaning it looks and works great on phones, tablets, and desktop computers. In fact, I design mobile-first since most of your visitors will likely browse on their phones.</p></div></div>
+      </div>
+
+      <div class="faq" data-faq>
+        <div class="faq-q">
+          <div class="q">Do you handle hosting and domain setup?</div>
+          <span class="faq-toggle"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </div>
+        <div class="faq-a"><div><p>Yes! I'll help you set up hosting and connect your domain (or get a new one). I'll recommend affordable, reliable hosting options (usually $10-15/month) and handle all the technical setup for you. Your website will be live and ready to go.</p></div></div>
+      </div>
+
+      <div class="faq" data-faq>
+        <div class="faq-q">
+          <div class="q">What's included in the free website audit?</div>
+          <span class="faq-toggle"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </div>
+        <div class="faq-a"><div><p>The free audit is a thorough review of your current website (or social media if you don't have a site). You'll get a clear report covering: mobile-friendliness, loading speed, SEO basics, lead-generation gaps, and how you compare to competitors. No tech jargon—just actionable insights you can use, even if you don't hire me.</p></div></div>
+      </div>
+
+      <div class="faq" data-faq>
+        <div class="faq-q">
+          <div class="q">Can I update my website myself after it's built?</div>
+          <span class="faq-toggle"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </div>
+        <div class="faq-a"><div><p>Yes! I build websites that are easy to manage. I'll provide a simple training session (recorded for your reference) showing you how to update text, images, and manage bookings or orders. Plus, you'll have my support for the included support period.</p></div></div>
+      </div>
+
+      <div class="faq" data-faq>
+        <div class="faq-q">
+          <div class="q">Is there a monthly fee or is it a one-time payment?</div>
+          <span class="faq-toggle"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </div>
+        <div class="faq-a"><div><p>The website design and development is a one-time payment—no monthly fees from me. The only ongoing costs are hosting ($10-15/month) and your domain ($10-15/year). If you choose the Voice AI Agent, that has a small monthly fee for the AI service (usually $50-100/month depending on call volume).</p></div></div>
+      </div>
+
+      <div class="faq" data-faq>
+        <div class="faq-q">
+          <div class="q">How do we get started?</div>
+          <span class="faq-toggle"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </div>
+        <div class="faq-a"><div><p>Simple! Click 'Get Free Website Audit' and fill out the form. I'll review your current online presence and send you a detailed report within 24 hours. From there, we can chat about your goals and I'll recommend the best package for your needs. No pressure, no obligation.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding-top:40px;">
+  <div class="wrap">
+    <div class="contact reveal">
+      <div class="contact-inner" style="grid-template-columns:1fr 1.3fr;">
+        <div>
+          <div class="label-line">Let's talk</div>
+          <h2>Done watching competitors take customers <em>that should be yours?</em></h2>
+          <p class="lede" style="margin-top:24px;">No calls, no pushy sales pitch. Fill in the form and I'll send you a free website audit within 24 hours — what's working, what's not, and exactly what I'd do to fix it. No strings attached.</p>
+          <dl class="contact-meta" style="margin-top:32px;padding-left:0;border-left:none;border-top:1px solid var(--border);padding-top:24px;">
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:contact.devstudiohub@gmail.com">contact.devstudiohub@gmail.com</a></dd>
+            </div>
+            <div>
+              <dt>Response time</dt>
+              <dd>Within 24 hours</dd>
+            </div>
+            <div>
+              <dt>Available</dt>
+              <dd>Mon — Fri · Worldwide</dd>
+            </div>
+          </dl>
+        </div>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <input type="checkbox" name="botcheck" style="display:none;">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-name">Your name</label>
+              <input type="text" id="cf-name" name="name" placeholder="Jane Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="cf-business">Business name</label>
+              <input type="text" id="cf-business" name="business" placeholder="Acme Plumbing" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-type">Business type</label>
+              <select id="cf-type" name="business_type">
+                <option value="">Select industry</option>
+                <option value="Restaurant or café">Restaurant or café</option>
+                <option value="Salon or barber">Salon or barber</option>
+                <option value="Medical or dental">Medical or dental</option>
+                <option value="Roofing or contractor">Roofing or contractor</option>
+                <option value="Gym or personal trainer">Gym or personal trainer</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cf-package">Package interest</label>
+              <select id="cf-package" name="package">
+                <option value="">Not sure yet</option>
+                <option value="Starter">Starter ($200–$350)</option>
+                <option value="Standard">Standard ($400–$650)</option>
+                <option value="Premium">Premium ($700–$1,200)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="cf-message">Tell us about your business</label>
+            <textarea id="cf-message" name="message" placeholder="What does your business do? What are your goals for the new website?"></textarea>
+          </div>
+
+          <button type="submit" class="btn primary lg" style="width:100%;justify-content:center;" id="cfSubmit">
+            Send message
+            <svg class="arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+
+          <div class="form-success" id="formSuccess">✓ Message sent! I'll get back to you within 24 hours.</div>
+          <div class="form-error" id="formError">Something went wrong. Please email me directly at <a href="mailto:contact.devstudiohub@gmail.com">contact.devstudiohub@gmail.com</a></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="#top" style="margin-bottom:20px;display:inline-flex;">
+          <span class="logo-mark">D</span>
+          <span>DevStudio <em style="font-style:normal;color:var(--accent);">Hub</em></span>
+        </a>
+        <p style="color:var(--muted);max-width:34ch;margin-top:12px;font-size:14px;">A small digital studio building websites for local businesses since 2019. Worldwide &amp; remote.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">New website</a></li>
+          <li><a href="#services">Website redesign</a></li>
+          <li><a href="#services">Hosting &amp; care</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#testimonials">Clients</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/devstudio.hub/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-wordmark" aria-hidden="true">Dev<em>Studio.</em></div>
+
+    <div class="footer-bottom">
+      <span>© 2026 DevStudio Hub</span>
+      <span>Worldwide · Remote</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
