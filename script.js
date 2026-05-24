@@ -282,9 +282,9 @@
       success.style.display = 'none';
       error.style.display   = 'none';
       try {
-        const data = {};
+        const data = { access_key: 'e0e4740e-c0fb-4172-8c14-37be9375da41' };
         new FormData(contactForm).forEach((v, k) => { data[k] = v; });
-        const res  = await fetch('/.netlify/functions/contact', {
+        const res  = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data),
