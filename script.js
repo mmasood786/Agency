@@ -170,9 +170,9 @@
   const qc = document.getElementById('quoteCalc');
   if (qc) {
     const tiers = {
-      starter:  { min: 200, max: 350,  days: '5 – 7',   revs: '1 revision round',  pages: 3 },
-      standard: { min: 400, max: 650,  days: '7 – 10',  revs: '2 revision rounds', pages: 5 },
-      premium:  { min: 700, max: 1200, days: '10 – 14', revs: '3 revision rounds', pages: 7 },
+      starter:  { min: 500,  max: 800,  days: '5 – 7',   revs: '1 revision round',  pages: 3 },
+      standard: { min: 1000, max: 1500, days: '7 – 10',  revs: '2 revision rounds', pages: 5 },
+      premium:  { min: 2000, max: 3500, days: '10 – 14', revs: '3 revision rounds', pages: 7 },
     };
     const state = { type: 'Restaurant or café', tier: 'standard' };
     const priceEl = document.getElementById('qcPrice');
@@ -284,6 +284,8 @@
       try {
         const data = { access_key: 'e0e4740e-c0fb-4172-8c14-37be9375da41' };
         new FormData(contactForm).forEach((v, k) => { data[k] = v; });
+        data.subject   = `New inquiry from ${data.name || 'DevStudio Hub'}`;
+        data.from_name = data.name || 'DevStudio Hub';
         const res  = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -296,4 +298,5 @@
       finally  { btn.disabled = false; btn.innerHTML = orig; }
     });
   }
+
 })();
