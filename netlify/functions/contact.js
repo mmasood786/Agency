@@ -14,6 +14,19 @@ exports.handler = async (event) => {
   }
 
   try {
+    if (!process.env.WEB3FORMS_KEY) {
+      console.error('WEB3FORMS_KEY environment variable is not set');
+      return {
+        statusCode: 500,
+        headers,
+        body: JSON.stringify({ success: false, message: 'Server misconfiguration — missing API key' }),
+      };
+    }
+
+    if (!event.body) {
+      return { statusCode: 400, headers, body: JSON.stringify({ success: false, message: 'Empty request body' }) };
+    }
+
     const payload = JSON.parse(event.body);
 
     // reject honeypot submissions
@@ -27,14 +40,18 @@ exports.handler = async (event) => {
       body: JSON.stringify({
         ...payload,
         access_key: process.env.WEB3FORMS_KEY,
-        subject: 'New inquiry — DevStudio Hub',
+        subject: `New inquiry — ${payload.business || 'DevStudio Hub'}`,
+        reply_to: payload.email || undefined,
       }),
     });
 
-    const data = await res.json();
+    const text = await res.text();
+    let data;
+    try { data = JSON.parse(text); } catch { data = { success: false, message: text }; }
     return { statusCode: 200, headers, body: JSON.stringify(data) };
 
   } catch (err) {
+    console.error('Contact function error:', err.message);
     return {
       statusCode: 500,
       headers,
