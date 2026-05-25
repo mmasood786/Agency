@@ -836,7 +836,7 @@
           <div class="q">Is there a monthly fee or is it a one-time payment?</div>
           <span class="faq-toggle"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
         </div>
-        <div class="faq-a"><div><p>The website design and development is a one-time payment—no monthly fees from me. The only ongoing costs are hosting ($10-15/month) and your domain ($10-15/year). If you choose the Voice AI Agent, that has a small monthly fee for the AI service (usually $50-100/month depending on call volume).</p></div></div>
+        <div class="faq-a"><div><p>The website design and development is a one-time payment—no monthly fees from me. The only ongoing costs are hosting ($10-15/month) and your domain ($10-15/year). That's it—no hidden fees or surprises.</p></div></div>
       </div>
 
       <div class="faq" data-faq>
@@ -1007,6 +1007,48 @@
     </div>
   </div>
 </footer>
+
+<!-- CHAT WIDGET -->
+<div id="chatWidget" class="chat-widget">
+  <div id="chatPanel" class="chat-panel" aria-hidden="true" aria-label="Quick answers">
+    <div class="chat-header">
+      <div class="chat-avatar" aria-hidden="true">D</div>
+      <div class="chat-header-info">
+        <div class="chat-header-name">DevStudio Hub</div>
+        <div class="chat-header-status"><span class="chat-status-dot" aria-hidden="true"></span>Typically replies fast</div>
+      </div>
+      <button class="chat-close-btn" id="chatClose" aria-label="Close chat">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-home" id="chatHome">
+        <div class="chat-bubble-wrap">
+          <div class="chat-bubble">
+            <p>Hi there! 👋 How can I help?</p>
+            <p>Pick a question below for an instant answer.</p>
+          </div>
+        </div>
+        <div class="chat-qa-list" id="chatQaList"></div>
+      </div>
+      <div class="chat-answer-view" id="chatAnswerView" hidden>
+        <button class="chat-back-btn" id="chatBackBtn">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M8 1.5L2.5 6.5 8 11.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          All questions
+        </button>
+        <div class="chat-asked-q" id="chatAskedQ"></div>
+        <div class="chat-bubble-wrap">
+          <div class="chat-bubble" id="chatAnswerBubble"></div>
+        </div>
+        <a href="#contact" class="chat-cta-btn" id="chatCtaBtn">Get started →</a>
+      </div>
+    </div>
+  </div>
+  <button id="chatToggle" class="chat-toggle-btn" aria-label="Open quick answers" aria-expanded="false">
+    <svg class="chat-icon-open" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2C6.03 2 2 5.58 2 10c0 2.1.9 4 2.38 5.44L3 20l4.8-1.56C8.8 18.77 9.88 19 11 19c4.97 0 9-3.58 9-8s-4.03-8-9-8z" fill="currentColor"/></svg>
+    <svg class="chat-icon-close" width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M1.5 1.5l12 12M13.5 1.5l-12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+</div>
 
 <script src="script.js"></script>
 
